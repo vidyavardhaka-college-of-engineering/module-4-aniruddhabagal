@@ -1,22 +1,24 @@
-// Program to retrieve book details
-//Input: Pro-c 200 20 
-//Output:Pro-c 200 20
+//Program to find the average
+//Input : 10 20 30 
+   // Output :20.000000
 
-#include<stdio.h> 
-int main() 
-{ 
-    struct book 
-    { 
-       char name[50];
-       int price;
+#include <stdio.h>
+struct math {
+    float num1;
+    float num2;
+    float num3;
+    float average;
+};
 
-       //declare name and price
-        int pages; 
-    }; 
-    struct book b1;
-     
-    printf("Enter names, prices & no. of pages of 3 books"); 
-    scanf("%s%d%d", &b1.name, &b1.price, &b1.pages);  
-    printf("%s %d %d", b1.name, b1.price, b1.pages); 
-     return 0;
-}  
+
+int main()
+{
+    struct math enternum;
+    struct math avg;
+    printf("Enter a number1,number2,number3:\n");
+    scanf("%f%f%f", &enternum.num1,&enternum.num2,&enternum.num3);
+     avg.average=(enternum.num1+enternum.num2+enternum.num3)/3;
+     printf("%f",avg.average);
+     //compute and print the average
+    return 0;
+} 
